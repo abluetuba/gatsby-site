@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "tuba-site",
+    title: "tuba",
+    titleTemplate: "%s | tuba",
+    description: "tuba's",
+    url: "https://www.tuba.dev",
   },
   plugins: [
     "gatsby-plugin-styled-components",

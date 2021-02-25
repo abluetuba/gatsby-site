@@ -3,10 +3,12 @@ import { graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/layout";
+import SEO from "./seo";
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Layout>
+      <SEO title={mdx.frontmatter.title} />
       <h1>{mdx.frontmatter.title}</h1>
       <MDXProvider>
         <MDXRenderer>{mdx.body}</MDXRenderer>
