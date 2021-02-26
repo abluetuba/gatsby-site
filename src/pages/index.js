@@ -3,32 +3,44 @@ import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import styled from "styled-components";
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <main>
-        <SEO title="Home" />
-        <h1>👋️ Hi, I'm Alberto!</h1>
+      <Main>
+        <SEO title="home" />
+        <h1>Hi, I'm Alberto!</h1>
+        <div className="links">
+          <a href="https://twitter.com/tubaalb">twitter</a>
+          <a href="https://github.com/abluetuba">github</a>
+        </div>
+
         <p>
-          I am a <b>web developer</b> from <b>Italy</b> who's trying to make
-          this internet thing a little bit better, one <b>&lt;tag /&gt; </b> at
-          a time.
+          I am a <b>web developer</b> from <b>Italy</b> trying to make this
+          internet thing a little bit better, one <b>&lt;tag /&gt; </b> at a
+          time.
         </p>
-        <h3>📑️ Blog / 🌱️ Digital Garden</h3>
+        <h3>blog | digital garden</h3>
         <ul>
           {data.allMdx.edges.map((post) => (
             <li>
-              <Link to={`/${post.node.frontmatter.slug}`}>
+              <Link to={`blog/${post.node.frontmatter.slug}`}>
                 {post.node.frontmatter.title}
               </Link>
             </li>
           ))}
         </ul>
-      </main>
+      </Main>
     </Layout>
   );
 };
+
+const Main = styled.main`
+  .links a {
+    margin-right: 0.5rem;
+  }
+`;
 
 export const query = graphql`
   query HomepageQuery {

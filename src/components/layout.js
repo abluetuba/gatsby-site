@@ -8,6 +8,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import Header from "./header";
+
 import { createGlobalStyle } from "styled-components";
 
 const Layout = ({ children }) => {
@@ -16,6 +18,7 @@ const Layout = ({ children }) => {
       <GlobalStyle />
 
       <div>
+        <Header />
         <main>{children}</main>
       </div>
     </>
