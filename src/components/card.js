@@ -1,29 +1,27 @@
 import React from "react";
-import Img from "gatsby-image";
 import styled from "styled-components";
-import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Card = styled.div`
-  h3 {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  div {
-    padding: 0.5rem;
-  }
-  img {
-    border: 4px solid black;
+  .gatsby-image {
+    border: 2px solid black;
   }
 `;
 
-export default ({ title, image, link }) => {
+export default ({ title, description, image, links }) => {
   return (
     <Card>
       <div>
         <h3>{title}</h3>
-        {link && <a href={link}>https://unoxdue.netlify.app</a>}
+        <p>{description}</p>
+        {links &&
+          links.map((link) => (
+            <p>
+              <a href={link}>{link}</a>
+            </p>
+          ))}
       </div>
-      {image && <Img fixed={image} />}
+      {image && <GatsbyImage image={image} className="gatsby-image" />}
     </Card>
   );
 };

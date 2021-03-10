@@ -35,14 +35,10 @@ const GlobalStyle = createGlobalStyle`
       color: black;
   }
 
-  html {
-    font-family: 'sans-serif';
-  }
-
   html,
   body {
     margin: 1rem;
- 
+    font-family: sans-serif;
   }
 `;
 

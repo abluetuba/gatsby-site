@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import styled from "styled-components";
+import Posts from "../components/posts";
 
 const IndexPage = ({ data }) => {
   return (
@@ -21,16 +22,8 @@ const IndexPage = ({ data }) => {
           internet thing a little bit better, one <b>&lt;tag /&gt; </b> at a
           time.
         </p>
-        <h3>blog | digital garden</h3>
-        <ul>
-          {data.allMdx.edges.map((post) => (
-            <li>
-              <Link to={`blog/${post.node.frontmatter.slug}`}>
-                {post.node.frontmatter.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <h3>posts</h3>
+        <Posts />
       </Main>
     </Layout>
   );
@@ -50,7 +43,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date
+            date(formatString: "MM.DD.YY")
             slug
           }
         }

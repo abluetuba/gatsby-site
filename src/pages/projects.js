@@ -1,4 +1,6 @@
 import React from "react";
+import { graphql } from "gatsby";
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Card from "../components/card";
@@ -10,8 +12,12 @@ export default function projects({ data }) {
       <h1>projects</h1>
       <Card
         title="unoXdue"
-        link="https://unoxdue.netlify.app"
-        image={data.file.childImageSharp.fixed}
+        links={[
+          "https://unoxdue.netlify.app",
+          "https://github.com/abluetuba/unoxdue",
+        ]}
+        description="PWA that displays the results and the table of the Serie A (Italian football league)."
+        image={data.unoxdue.childImageSharp.gatsbyImageData}
       />
     </Layout>
   );
@@ -19,11 +25,9 @@ export default function projects({ data }) {
 
 export const imageQuery = graphql`
   query ImageQuery {
-    file(relativePath: { eq: "unoxdue.png" }) {
+    unoxdue: file(relativePath: { eq: "unoxdue.png" }) {
       childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(layout: FIXED, width: 300)
       }
     }
   }
