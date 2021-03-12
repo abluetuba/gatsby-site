@@ -1,12 +1,10 @@
 import * as React from "react";
-import { graphql } from "gatsby";
-import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import styled from "styled-components";
 import Posts from "../components/posts";
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <Layout>
       <Main>
@@ -33,22 +31,11 @@ const Main = styled.main`
   .links a {
     margin-right: 0.5rem;
   }
-`;
-
-export const query = graphql`
-  query HomepageQuery {
-    allMdx {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MM.DD.YY")
-            slug
-          }
-        }
-      }
-    }
+  h3 {
+    margin-bottom: 0;
+  }
+  ul {
+    margin-top: 0.5rem;
   }
 `;
 

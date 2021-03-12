@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-const Card = styled.div`
+const CardDiv = styled.div`
   .gatsby-image {
     border: 2px solid black;
   }
 `;
 
-export default ({ title, description, image, links }) => {
+const Card = ({ title, description, image, links }) => {
   return (
-    <Card>
+    <CardDiv>
       <div>
         <h3>{title}</h3>
         <p>{description}</p>
@@ -22,6 +22,8 @@ export default ({ title, description, image, links }) => {
           ))}
       </div>
       {image && <GatsbyImage image={image} className="gatsby-image" />}
-    </Card>
+    </CardDiv>
   );
 };
+
+export default Card;

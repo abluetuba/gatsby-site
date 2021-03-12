@@ -13,12 +13,20 @@ const Article = styled.article`
   .date {
     font-style: italic;
   }
+  pre {
+    white-space: pre-wrap;
+    background-color: #f6f8fa;
+    padding: 0.25rem;
+  }
 `;
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <SEO title={mdx.frontmatter.title} />
+      <SEO
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.excerpt}
+      />
       <Article>
         <div>
           <p className="date">{mdx.frontmatter.date}</p>
@@ -39,6 +47,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        excerpt
         date(formatString: "MMMM DD, YYYY")
       }
     }
