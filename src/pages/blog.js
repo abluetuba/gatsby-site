@@ -6,7 +6,7 @@ import Posts from "../components/posts";
 export default function blog({ data }) {
   return (
     <Layout>
-      <SEO title="blog" />
+      <SEO title="tuba's blog" />
       <h1>blog</h1>
       <Posts excertps />
     </Layout>

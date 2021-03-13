@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "tuba",
-    titleTemplate: "%s | tuba",
+    titleTemplate: "%s",
     description: "some thoughts on web development and other things",
     url: "https://www.tuba.dev",
   },

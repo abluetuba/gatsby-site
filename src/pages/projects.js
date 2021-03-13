@@ -8,7 +8,7 @@ import Card from "../components/card";
 export default function projects({ data }) {
   return (
     <Layout>
-      <SEO title="projects" />
+      <SEO title="tuba's projects" />
       <h1>projects</h1>
       <Card
         title="unoXdue"

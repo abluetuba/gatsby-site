@@ -8,7 +8,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Main>
-        <SEO title="home" />
+        <SEO title="tuba's site" />
         <h1>Hi, I'm Alberto!</h1>
         <div className="links">
           <a href="https://twitter.com/tubaalb">twitter</a>
