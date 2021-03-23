@@ -11,7 +11,6 @@ const IndexPage = () => {
         <SEO title="tuba's site" />
         <h1>Hi, I'm Alberto!</h1>
         <div className="links">
-          <a href="https://twitter.com/tubaalb">twitter</a>
           <a href="https://github.com/abluetuba">github</a>
         </div>
 
