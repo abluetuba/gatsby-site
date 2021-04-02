@@ -10,15 +10,8 @@ const IndexPage = () => {
       <Main>
         <SEO title="tuba's site" />
         <h1>Hi, I'm Alberto!</h1>
-        <div className="links">
-          <a href="https://github.com/abluetuba">github</a>
-        </div>
 
-        <p>
-          I am a <b>web developer</b> from <b>Italy</b> trying to make this
-          internet thing a little bit better, one <b>&lt;tag /&gt; </b> at a
-          time.
-        </p>
+        <p>I am a computer engineering student from Italy.</p>
         <h3>posts</h3>
         <Posts />
       </Main>

@@ -14,6 +14,7 @@ export default function header() {
       <Link to="/">tuba.dev</Link>
       <Link to="/blog">blog</Link>
       <Link to="/projects">projects</Link>
+      <a href="https://github.com/abluetuba">github</a>
     </Nav>
   );
 }
