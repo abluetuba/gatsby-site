@@ -16,7 +16,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "b0d0f1f3e9954c7883d2b82c0702fe40"}'
+      ></script>
       <div>
         <Header />
         <main>{children}</main>
