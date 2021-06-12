@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const CardDiv = styled.div`
   .gatsby-image {
-    border: 2px solid black;
+    border: 1px solid black;
   }
 `;
 
