@@ -11,7 +11,7 @@ const IndexPage = () => {
         <SEO title="tuba's site" />
         <h1>Hi, I'm Alberto!</h1>
 
-        <p>I am a computer engineering student from Italy.</p>
+        <p>I am a computer engineer from Italy.</p>
         <h3>posts</h3>
         <Posts />
       </Main>
