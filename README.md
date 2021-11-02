@@ -1,3 +1,3 @@
-# 🚀 tuba.dev
+# gatsby-site
 
-This is my personal website: [tuba.dev](https://tuba.dev)
+My old personal website, made with Gatsby 
